@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas | Alessandra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas</h1>
+    <p class="subtitulo">Crie senhas fortes e seguras</p>
+
+    <div class="resultado">
+      <input type="text" id="senha" readonly placeholder="Sua senha aparecerá aqui">
+      <button id="btn-copiar" title="Copiar">📋</button>
+    </div>
+
+    <div class="opcoes">
+      <div class="campo">
+        <label for="tamanho">Tamanho da senha: <span id="valor-tamanho">12</span></label>
+        <input type="range" id="tamanho" min="6" max="32" value="12">
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="maiusculas" checked>
+        Letras Maiúsculas (A-Z)
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="minusculas" checked>
+        Letras Minúsculas (a-z)
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="numeros" checked>
+        Números (0-9)
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="simbolos" checked>
+        Símbolos (!@#$%...)
+      </label>
+    </div>
+
+    <button id="btn-gerar">Gerar Senha</button>
+    <p id="mensagem" class="mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
